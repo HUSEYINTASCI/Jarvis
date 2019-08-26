@@ -1,0 +1,50 @@
+body{
+
+    background-image: url("../images/hive.jpg");
+    background-size: cover;
+
+}
+
+#main{
+
+position: absolute;
+
+margin: -71px 0 0 -87px;
+}
+#search{
+
+position: absolute;
+
+margin: 439px 0 0px 639px;
+
+width: 354px;
+}
+
+#lis{background-image: url("../images/colormic.jpg");border-radius: 66px;border: none;background-size: cover;position: absolute;width: 84px;height: 112px;margin: 368px 0 0 523px;display: inline-block;cursor: pointer; /* Safari */transition-duration: 0.4s;box-shadow: 0 9px #999;}
+
+#lis:hover {background-color: white}
+
+#lis:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#speak{background-image: url("../images/colormic.jpg");border-radius: 66px;border: none;background-size: cover;position: absolute;width: 84px;height: 112px;margin: 368px 0 0 400px;display: inline-block;cursor: pointer; /* Safari */transition-duration: 0.4s;box-shadow: 0 9px #999;}
+
+#speak:hover {background-color: white}
+
+#speak:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#mic{
+
+position: absolute;
+
+display: none;
+
+width: 272px;
+
+margin: 179px 0 0 594px;
+}
