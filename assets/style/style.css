@@ -476,7 +476,9 @@ ul {
 
 #downline2{float: left;position: absolute;height: 278px;width: 431px;border: 1px solid;border-radius: 33px;margin: 42px 0 0 17px;border-color: rgba(2, 254, 255, 0.8);}
 
-#downline{float: left;position: absolute;height: 547px;width: 612px;border: 1px solid;border-radius: 33px;margin: 42px 0 0 835px;border-color: rgba(2, 254, 255, 0.8);}
+#downline{
+  display: none;
+  float: left;position: absolute;height: 547px;width: 612px;border: 1px solid;border-radius: 33px;margin: 42px 0 0 835px;border-color: rgba(2, 254, 255, 0.8);}
 @keyframes rotate {
   0% {
     transform: rotateZ(0deg);

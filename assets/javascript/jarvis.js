@@ -125,6 +125,7 @@ function sp(){
 
 
 function mv(){
+  $("#downline").css("display","block");
   $("#downline").empty();
 var murl = "https://www.omdbapi.com/?t=superman&apikey=trilogy";
 
@@ -148,6 +149,7 @@ $.ajax({
 }
 
 function song(){
+  $("#downline").css("display","block");
   $("#downline").empty();
   var frame=$("<iframe width="+"560"+" height="+"315"+" src="+"https://www.youtube.com/embed/TrmWoBneIww"+" frameborder="+"0"+" allow="+"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"+" allowfullscreen></iframe>")
   $("#downline").append(frame);
