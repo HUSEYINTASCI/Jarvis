@@ -43,7 +43,7 @@ function Concert(userpa3) {
     axios.get("https://rest.bandsintown.com/artists/" + userpa3 + "/events?app_id=codingbootcamp").then((res) => {
 
         for (var i = 0; i < res.data.length; i++) {
-
+            console.log("----------------------------------------------------------------------------------")
             console.log(i);
             fs.appendFileSync("log.txt", i + "\n");
             console.log("Name of the Venue: " + res.data[i].venue.name);
@@ -52,7 +52,7 @@ function Concert(userpa3) {
             fs.appendFileSync("log.txt", "Venue Location: " + res.data[i].city + "\n");
             console.log("Date of the Event: " + res.data[i].datetime);
             fs.appendFileSync("log.txt", "Date of the Event: " + res.data[i].datetime + "\n");
-
+            console.log("----------------------------------------------------------------------------------")
         }
 
     });
@@ -76,7 +76,7 @@ function Song(userpa3) {
             var songs = data.tracks.items;
 
             for (var i = 0; i < songs.length; i++) {
-
+                console.log("----------------------------------------------------------------------------------")
                 console.log(i);
                 fs.appendFileSync("log.txt", i + "\n");
                 console.log("Song name: " + songs[i].name);
@@ -87,7 +87,7 @@ function Song(userpa3) {
                 fs.appendFileSync("log.txt", "album: " + songs[i].album.name + "\n");
                 console.log("Artist(s): " + songs[i].artists[0].name);
                 fs.appendFileSync("log.txt", "artist(s): " + songs[i].artists[0].name + "\n");
-
+                console.log("----------------------------------------------------------------------------------")
             }
         }
     );
@@ -110,7 +110,7 @@ function Movie(userpa3) {
     }).then(dt => {
 
 
-
+        console.log("----------------------------------------------------------------------------------")
         console.log("Title: " + dt.data.Title);
         fs.appendFileSync("log.txt", "Title: " + dt.data.Title + "\n");
         console.log("Release Year: " + dt.data.Year);
@@ -125,7 +125,7 @@ function Movie(userpa3) {
         fs.appendFileSync("log.txt", "Plot: " + dt.data.Plot + "\n");
         console.log("Actors: " + dt.data.Actors);
         fs.appendFileSync("log.txt", "Actors: " + dt.data.Actors + "\n");
-
+        console.log("----------------------------------------------------------------------------------")
 
     });
 }

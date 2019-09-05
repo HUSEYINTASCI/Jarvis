@@ -97,7 +97,12 @@ function sp(){
      mv();
      speak("Here is the movie information")
     clean();
-  }else if (t.indexOf("find") > -1){
+  }else if (t.indexOf("song") > -1){
+     
+    song();
+    speak("Here is the song ")
+   clean();
+ }else if (t.indexOf("find") > -1){
      
     speak("Yes sure , what exactly you want me to  find , movie , or , song");
     clean();
@@ -140,4 +145,10 @@ $.ajax({
          $("#downline").append(title,image,plot);
               
 });
+}
+
+function song(){
+  $("#downline").empty();
+  var frame=$("<iframe width="+"560"+" height="+"315"+" src="+"https://www.youtube.com/embed/TrmWoBneIww"+" frameborder="+"0"+" allow="+"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"+" allowfullscreen></iframe>")
+  $("#downline").append(frame);
 }
