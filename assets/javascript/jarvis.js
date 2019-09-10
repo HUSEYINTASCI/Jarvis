@@ -7,6 +7,7 @@ var d = new Date();
 document.querySelector("#time").innerHTML = d;
 var voice;
 var text;
+var gs;
 //-------------------------------------------------------------------------------------------------------------------------------------
 
 //Recognition user
@@ -58,7 +59,13 @@ function rec() {
      search();
       
       clean();
-    }  else if (t.indexOf("movie") > -1) {
+    }else if (t.indexOf("close") > -1) {
+      speak("sure");
+       
+     cls();
+      
+      clean();
+    }   else if (t.indexOf("movie") > -1) {
   
       mv();
       speak("Here is the movie information")
@@ -86,7 +93,10 @@ function rec() {
   recognition.start();
 
 }
+$(document).on("click","body",function(){
+$("#note_input").text("I'm Listening You !");
 
+})
 
 $(document).ready(function () {
 
@@ -112,9 +122,12 @@ function clean() {
 function search()
 {
     url ='http://www.google.com/search?q=' + s;
-    window.open(url,'_blank');
+   gs=  window.open(url,'_blank');
 }
+function cls(){
 
+  gs.close();
+}
 
 //----------------------------------------------------------------------------------------------------------------------------------
 
