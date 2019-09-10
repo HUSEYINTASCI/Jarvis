@@ -1,9 +1,12 @@
 
 var userpa3;
 var t;
+var s;
 var lasttranscript;
 var d = new Date();
 document.querySelector("#time").innerHTML = d;
+var voice;
+var text;
 //-------------------------------------------------------------------------------------------------------------------------------------
 
 //Recognition user
@@ -13,7 +16,7 @@ function rec() {
   let recognition = new window.SpeechRecognition();
 
   recognition.interimResults = true;
-  recognition.maxAlternatives = 10;
+  recognition.maxAlternatives = 5;
   recognition.continuous = true;
   recognition.onresult = (lis) => {
     let itranscript = '';
@@ -28,6 +31,57 @@ function rec() {
     }
     t = document.querySelector("#note_input").innerHTML = lasttranscript;
 
+    if (t.indexOf("how are you") > -1) {
+
+      speak("I am great ,  How about you");
+  
+      clean();
+    } else if (t.indexOf("name") > -1) {
+  
+      speak("My name is, Jarvis, nice to meet you");
+      clean();
+    } else if (t.indexOf("hey") > -1) {
+  
+      speak("Hi , How may help you to day");
+      clean();
+    } else if (t.indexOf("understand") > -1) {
+  
+      speak("Yes i can understand you but ,  i can not thing as a human , right now , but some future,  who knows");
+      clean();
+    }else if (t.indexOf("does mean") > -1) {
+  
+      speak("J.A.R.V.I.S.  , (Stands for Just A Rather Very Intelligent System), also stylized as JARVIS , or Jarvis , is a highly advanced computerized  A.I. , developed by , Harry ");
+      clean();
+    }else if (t.indexOf("search") > -1) {
+      speak("sure");
+      s=t;
+     search();
+      
+      clean();
+    }  else if (t.indexOf("movie") > -1) {
+  
+      mv();
+      speak("Here is the movie information")
+      clean();
+    } else if (t.indexOf("song") > -1) {
+  
+      song();
+      speak("Here is the song ")
+      clean();
+    } else if (t.indexOf("find") > -1) {
+  
+      speak("Yes sure , what exactly you want me to  find , movie , or , song");
+      clean();
+    } else if (t.indexOf("thank you") > -1) {
+  
+      speak("it's my pleasure");
+      clean();
+    } else {
+  
+     // speak("sorry , i can not hear you very well , can you try again");
+     //  clean();
+  
+    }
   }
   recognition.start();
 
@@ -41,17 +95,6 @@ $(document).ready(function () {
 
 });
 
-
-
-
-$(document).on("click", "body", function () {
-
-  sp();
-
-});
-
-var voice;
-var text;
 function speak(e) {
 
   text = new SpeechSynthesisUtterance(e);
@@ -61,64 +104,15 @@ function speak(e) {
 
 }
 
-
-
-
-
 function clean() {
   $("#note_input").innerHTML = "";
   lasttranscript = "";
 }
 
-function sp() {
-
-  t = $("#note_input").text();
-
-
-
-  if (t.indexOf("how are you") > -1) {
-
-    speak("I am great ,  How about you");
-
-    clean();
-  } else if (t.indexOf("name") > -1) {
-
-    speak("My name is, Jarvis, nice to meet you");
-    clean();
-  } else if (t.indexOf("hey") > -1) {
-
-    speak("Hi , How may help you to day");
-    clean();
-  } else if (t.indexOf("understand") > -1) {
-
-    speak("Yes i can understand you but ,  i can not thing as a human , right now , but some future,  who knows");
-    clean();
-  } else if (t.indexOf("movie") > -1) {
-
-    mv();
-    speak("Here is the movie information")
-    clean();
-  } else if (t.indexOf("song") > -1) {
-
-    song();
-    speak("Here is the song ")
-    clean();
-  } else if (t.indexOf("find") > -1) {
-
-    speak("Yes sure , what exactly you want me to  find , movie , or , song");
-    clean();
-  } else if (t.indexOf("thank you") > -1) {
-
-    speak("it's my pleasure");
-    clean();
-  } else {
-
-    speak("sorry , i can not hear you very well , can you try again");
-    clean();
-
-  }
-
-
+function search()
+{
+    url ='http://www.google.com/search?q=' + s;
+    window.open(url,'_blank');
 }
 
 
