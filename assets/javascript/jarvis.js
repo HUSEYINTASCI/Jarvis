@@ -8,6 +8,7 @@ document.querySelector("#time").innerHTML = d;
 var voice;
 var text;
 var gs;
+var uc;
 //-------------------------------------------------------------------------------------------------------------------------------------
 
 //Recognition user
@@ -41,6 +42,10 @@ function rec() {
   
       speak("My name is, Jarvis, nice to meet you");
       clean();
+    } else if (t.indexOf("name") > -1) {
+  
+      speak("");
+      clean();
     } else if (t.indexOf("hey") > -1) {
   
       speak("Hi , How may help you to day");
@@ -66,7 +71,7 @@ function rec() {
       
       clean();
     }   else if (t.indexOf("movie") > -1) {
-  
+      uc=t.slice(5);
       mv();
       speak("Here is the movie information")
       clean();
@@ -121,8 +126,8 @@ function clean() {
 
 function search()
 {
-    url ='http://www.google.com/search?q=' + s;
-   gs=  window.open(url,'_blank');
+      url ='http://www.google.com/search?q=' + s;
+       gs=  window.open(url,'_blank');
 }
 function cls(){
 
@@ -135,7 +140,7 @@ function cls(){
 function mv() {
   $("#downline").css("display", "block");
   $("#downline").empty();
-  var murl = "https://www.omdbapi.com/?t=superman&apikey=trilogy";
+  var murl = "https://www.omdbapi.com/?"+uc+"&apikey=trilogy";
 
 
 
