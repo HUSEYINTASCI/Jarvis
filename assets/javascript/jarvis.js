@@ -82,7 +82,7 @@ function rec() {
       clean();
     } else if (t.indexOf("find") > -1) {
   
-      speak("Yes sure , what exactly you want me to  find , movie , or , song");
+      speak("Yes sure , what exactly you want me to  find , movie , or , song, and , i can search to google if you want , just say search");
       clean();
     } else if (t.indexOf("thank you") > -1) {
   
@@ -157,7 +157,7 @@ function mv() {
     plot.text(response.Plot);
 
     $("#downline").append(title, image, plot);
-
+    $("#eart").css("display","none");
   });
 }
 
@@ -166,4 +166,5 @@ function song() {
   $("#downline").empty();
   var frame = $("<iframe width=" + "560" + " height=" + "315" + " src=" + "https://www.youtube.com/embed/TrmWoBneIww" + " frameborder=" + "0" + " allow=" + "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" + " allowfullscreen></iframe>")
   $("#downline").append(frame);
+  $("#eart").css("display","none");
 }
