@@ -10,4 +10,4 @@ J.A.R.V.I.S. (Stands for Just A Rather Very Intelligent System), also stylized a
 
 
 Home Page
-![alt text](https://github.com/HUSEYINTASCI/Jarvis/tree/master/assets/images/1.PNG)
+![alt text](https://github.com/HUSEYINTASCI/Jarvis/blob/master/assets/images/1.PNG)
