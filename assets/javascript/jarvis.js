@@ -99,8 +99,8 @@ function rec() {
 
 }
 $(document).on("click","body",function(){
-$("#note_input").text("I'm Listening You !");
-
+$("#note_input").text("I'm Listening To You !");
+alert("Please use those keyword Hey, Find, song, movie, close, search, understand, name and How are You")
 })
 
 $(document).ready(function () {
