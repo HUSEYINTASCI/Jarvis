@@ -89,14 +89,14 @@ body {
 
 .title {
   font-size: 30px;
-  margin: 0 0 0 -606px;
+  margin: 174px 21px 45px 151px;
 }
 
  
 #rightmenu {
-  float: right;
-  margin-right: 20px;
-  width: 300px;
+  float: left;
+  margin-right: 104px;
+  /* width: 300px; */
 }
 
 #note_input {
@@ -104,9 +104,9 @@ body {
   background: transparent;
   transition: 0.3s;
   position: absolute;
-  margin: 121px 0 0 58px;
+  margin: 0 0 0 52px;
   height: 161px;
-  width: 368px;
+  width: 292px;
   overflow: hidden;
 }
 
@@ -122,7 +122,7 @@ ul {
   width: 100%;
   height: 100%;
   z-index: -1;
-  margin: -177px 0 0 -125px;
+  margin: 0 0 0 0;
 }
 
 .arc_reactor {
@@ -470,11 +470,11 @@ ul {
 }
 #time{
   position: absolute;
-    margin: -31px 0 0 -330px;
-    animation: flicker2 0.2s infinite;
-    background-color: lightblue;
-    color: black;
-    border-radius: 20px;
+  margin: -32px 0 0 0px;
+  animation: flicker2 0.2s infinite;
+  background-color: lightblue;
+  color: black;
+  border-radius: 20px;
 }
 .mposter{
   width: 234px;
@@ -482,21 +482,21 @@ ul {
 
 #el{
   position: absolute;
-  width: 465px;
-  height: 447px;
-  border-radius: 429px;
-  border: 6px dotted rgba(12, 255, 255, 1.15);
+  width: 13rem;
+  height: 13rem;
+  border-radius: 87rem;
+  border: 5px dotted rgba(12, 255, 255, 1.15);
   border-left: 33px;
-  border-right: 0px;
+  /* border-right: 0px; */
   border-top: 1px;
-  margin: 124px 0 0 924px;
+  margin: 230px 0 0 22px;
   z-index: 10;
-  animation: rotate_anti 194s linear infinite;
+  animation: rotate_anti 14s linear infinite;
 }
-#el2{position: absolute;width: 429px;height: 424px;border-radius: 374px;border: 6px double rgba(12, 255, 255, 1.15);border-left: 33px;border-right: 0px;border-bottom: 1px;margin: 137px 0 0 940px;z-index: 10;animation: rotate 33s linear infinite;}
-#downline3{float: left;position: absolute;height: 29px;border-radius: 119px;width: 375px;border: 9px solid;border-radius: 146px;margin: 473px 0 0 36px;border-color: rgba(2, 254, 255, 0.8);}
+#el2{z-index: 10;animation: rotate 33s linear infinite;position: absolute;width: 15rem;height: 15rem;border-radius: 9rem;border: 5px double rgba(12, 255, 255, 1.15);border-top: 1px;margin: 219px 0 0 2px;}
+#downline3{float: left;position: absolute;height: 19%;width: 3%;border: 0;border-radius: -4;margin: 549px 0 0 320px;border-color: rgba(2, 254, 255, 0.8);}
 
-#downline2{float: left;position: absolute;height: 170px;width: 431px;border: 1px solid;border-radius: 33px;margin: 42px 0 0 17px;border-color: rgba(2, 254, 255, 0.8);}
+#downline2{/* float: left; *//* position: absolute; *//* height: 170px; *//* width: 431px; *//* border: 1px solid; *//* border-radius: 33px; *//* margin: 43px 0 0 -22px; *//* border-color: rgba(2, 254, 255, 0.8); */}
 
 #downline{
   display: none;
@@ -504,8 +504,7 @@ ul {
 
 #earth{
   position: absolute;
-  margin: 155px 0 0 957px;
-  animation: rotate_anti 37s ease-out infinite;
+  margin: 249px 0 0 44px;
 }
   @keyframes rotate {
   0% {
@@ -586,4 +585,6 @@ ul {
   }
 }
  
- 
+ #earthimg{
+   width: 15%;
+ }

@@ -35,12 +35,12 @@ function rec() {
 
     if (t.indexOf("how are you") > -1) {
 
-      speak("I am great ,  How about you");
+      speak("I am great sir ,  How about you");
   
       clean();
     } else if (t.indexOf("name") > -1) {
   
-      speak("My name is, Jarvis, nice to meet you");
+      speak("My name is, Jarvis, nice to meet you sir");
       clean();
     } else if (t.indexOf("name") > -1) {
   
@@ -48,15 +48,15 @@ function rec() {
       clean();
     } else if (t.indexOf("hey") > -1) {
   
-      speak("Hi , How may help you to day");
+      speak("Hi, sir , How may help you to day");
       clean();
     } else if (t.indexOf("understand") > -1) {
   
       speak("Yes i can understand you but ,  i can not thing as a human , right now , but some future,  who knows");
       clean();
-    }else if (t.indexOf("does mean") > -1) {
+    }else if (t.indexOf("made you") > -1) {
   
-      speak("J.A.R.V.I.S.  , (Stands for Just A Rather Very Intelligent System), also stylized as JARVIS , or Jarvis , is a highly advanced computerized  A.I. , developed by , Harry ");
+      speak("my boss is mehmet tasci, he created me 2021 sir ");
       clean();
     }else if (t.indexOf("search") > -1) {
       speak("sure");
@@ -86,7 +86,7 @@ function rec() {
       clean();
     } else if (t.indexOf("thank you") > -1) {
   
-      speak("it's my pleasure");
+      speak("it's my pleasure sir");
       clean();
     } else {
   
@@ -114,7 +114,7 @@ function speak(e) {
 
   text = new SpeechSynthesisUtterance(e);
   voice = window.speechSynthesis.getVoices();
-  text.voice = voice[0];
+  text.voice = voice[3];
   window.speechSynthesis.speak(text);
 
 }
