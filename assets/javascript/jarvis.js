@@ -38,13 +38,37 @@ function rec() {
       speak("I am great sir ,  How about you");
   
       clean();
-    } else if (t.indexOf("name") > -1) {
+    } else if (t.indexOf("how old are you") > -1) {
+  
+      speak("i am bilion years old sir");
+      clean();
+    }else if (t.indexOf("name") > -1) {
   
       speak("My name is, Jarvis, nice to meet you sir");
       clean();
-    } else if (t.indexOf("name") > -1) {
+    } else if (t.indexOf(" are you there") > -1) {
   
-      speak("");
+      speak("at your service sir");
+      clean();
+    } else if (t.indexOf("how i look like") > -1) {
+  
+      speak("you look great sir");
+      clean();
+    } else if (t.indexOf("who am i") > -1) {
+  
+      speak("you are my master");
+      clean();
+    } else if (t.indexOf("jarvis") > -1) {
+  
+      speak("yes sir");
+      clean();
+    } else if (t.indexOf("jarvis ordamısın") > -1) {
+  
+      speak("hizmetinizdeyim efendim");
+      clean();
+    }  else if (t.indexOf("can you introduce yourself") > -1) {
+  
+      speak("I am jarvis mehmet's artificial assistant");
       clean();
     } else if (t.indexOf("hey") > -1) {
   
@@ -89,6 +113,7 @@ function rec() {
       speak("it's my pleasure sir");
       clean();
     } else {
+  
   
      // speak("sorry , i can not hear you very well , can you try again");
      //  clean();
